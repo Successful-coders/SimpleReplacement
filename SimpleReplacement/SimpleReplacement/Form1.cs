@@ -73,7 +73,37 @@ namespace SimpleReplacement
                     $"Details:\n\n{ex.StackTrace}");
                 }
                 coder = new Coder(alphabet, replacement);
-                coder.Decode(text);
+                string decode = coder.Decode(text);
+                if (decode == "0")
+                {
+                    infoTextBox.WriteLine("В тексте содержится символ не входящий в алфавит.");
+                }
+                else
+                {
+                    var saveFileDialog = new SaveFileDialog();//Создание диалогового окна для сохранения файла
+                    saveFileDialog.Filter = "Compressed files (.txt)|*.txt";//Фильтр файла
+
+                    DialogResult result = saveFileDialog.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        string fileName = saveFileDialog.FileName;//Путь файла
+
+                        // Удаляем файл, если такой уже существует
+                        if (File.Exists(fileName))
+                        {
+                            File.Delete(fileName);
+                        }
+
+                        // Создаем и записываем файл
+                        using (StreamWriter sw = File.CreateText(fileName))
+                        {
+                            sw.Write(decode);
+                        }
+                    }
+                    infoTextBox.WriteLine("Исходный текст: " + text);
+                    infoTextBox.WriteLine("Декодированный текст: " + decode);
+                    infoTextBox.WriteLine("------------------------------");
+                }
             }
         }
         private void CodingTextClick(object sender, EventArgs e)
@@ -124,15 +154,38 @@ namespace SimpleReplacement
                     MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
                     $"Details:\n\n{ex.StackTrace}");
                 }
-                try
+                
+                coder = new Coder(alphabet, replacement);
+                string chipher = coder.Encode(text);
+                if ( chipher == "0")
                 {
-                    coder = new Coder(alphabet, replacement);
-                    coder.Encode(text);
+                    infoTextBox.WriteLine("В тексте содержится символ не входящий в алфавит.");
                 }
-                catch (SecurityException ex)//Вывод ошибки
+                else
                 {
-                    MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
-                    $"Details:\n\n{ex.StackTrace}");
+                    var saveFileDialog = new SaveFileDialog();//Создание диалогового окна для сохранения файла
+                    saveFileDialog.Filter = "Compressed files (.txt)|*.txt";//Фильтр файла
+
+                    DialogResult result = saveFileDialog.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        string fileName = saveFileDialog.FileName;//Путь файла
+
+                        // Удаляем файл, если такой уже существует
+                        if (File.Exists(fileName))
+                        {
+                            File.Delete(fileName);
+                        }
+
+                        // Создаем и записываем файл
+                        using (StreamWriter sw = File.CreateText(fileName))
+                        {
+                            sw.Write(chipher);
+                        }
+                    }
+                    infoTextBox.WriteLine("Исходный текст: " + text);
+                    infoTextBox.WriteLine("Закодированный текст: " + chipher);
+                    infoTextBox.WriteLine("------------------------------");
                 }
             }
         }

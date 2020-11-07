@@ -86,7 +86,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox infoTextBox;
-        private System.Windows.Forms.OpenFileDialog openAlphabet;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
