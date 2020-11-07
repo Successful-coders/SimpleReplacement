@@ -1,0 +1,10 @@
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\bin\Debug\SimpleReplacement.exe.config
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\bin\Debug\SimpleReplacement.exe
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\bin\Debug\SimpleReplacement.pdb
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\obj\Debug\SimpleReplacement.csprojAssemblyReference.cache
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\obj\Debug\SimpleReplacement.Form1.resources
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\obj\Debug\SimpleReplacement.Properties.Resources.resources
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\obj\Debug\SimpleReplacement.csproj.GenerateResource.cache
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\obj\Debug\SimpleReplacement.csproj.CoreCompileInputs.cache
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\obj\Debug\SimpleReplacement.exe
+C:\Users\Жопчики\Desktop\Даша\projects with git\оттик лр 4\SimpleReplacement\SimpleReplacement\obj\Debug\SimpleReplacement.pdb
